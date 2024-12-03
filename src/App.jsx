@@ -35,7 +35,37 @@ function App() {
       }
     }
 
+    async function fetchfeed() {
+      const body = {
+        "id": "Username",
+        "userid": "kainez"
+      };
+      const data = JSON.stringify(body);
+
+      try {
+        const response = await fetch('https://be-liard-phi.vercel.app/api/feed/content', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: data,
+          credentials: 'include',
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const responseData = await response.json();
+        console.log(responseData);
+
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    }
+
     fetchdata()
+    fetchfeed()
 
   }, [])
 
