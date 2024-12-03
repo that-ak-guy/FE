@@ -64,8 +64,12 @@ function App() {
       }
     }
 
-    // fetchdata()
-    fetchfeed()
+    fetchdata()
+
+    setTimeout(() => {
+      fetchfeed()
+    }, 5);
+
 
   }, [])
 
