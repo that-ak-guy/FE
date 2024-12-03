@@ -33,42 +33,39 @@ function App() {
       } catch (error) {
         console.error('Error:', error);
       }
-    }
 
-    async function fetchfeed() {
-      const body = {
+
+      const body2 = {
         "id": "Username",
         "userid": "kainez"
       };
-      const data = JSON.stringify(body);
+      const data2 = JSON.stringify(body2);
 
       try {
-        const response = await fetch('https://be-liard-phi.vercel.app/api/feed/content', {
+        const response2 = await fetch('https://be-liard-phi.vercel.app/api/feed/content', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: data,
+          body: data2,
           credentials: 'include',
         });
 
-        if (!response.ok) {
+        if (!response2.ok) {
           throw new Error('Network response was not ok');
         }
 
-        const responseData = await response.json();
-        console.log(responseData);
+        const responseData2 = await response2.json();
+        console.log(responseData2);
 
-      } catch (error) {
-        console.error('Error:', error);
+      } catch (error2) {
+        console.error('Error:', error2);
       }
     }
 
-    fetchdata()
 
-    setTimeout(() => {
-      fetchfeed()
-    }, 5000);
+
+    fetchdata()
 
 
   }, [])
