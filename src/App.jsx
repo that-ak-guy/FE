@@ -20,7 +20,7 @@ function App() {
             'Content-Type': 'application/json'
           },
           body: data,
-          // credentials: 'include',
+          credentials: 'include',
         });
 
         if (!response.ok) {
