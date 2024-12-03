@@ -68,7 +68,7 @@ function App() {
 
     setTimeout(() => {
       fetchfeed()
-    }, 5);
+    }, 5000);
 
 
   }, [])
