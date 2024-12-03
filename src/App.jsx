@@ -64,7 +64,7 @@ function App() {
       }
     }
 
-    fetchdata()
+    // fetchdata()
     fetchfeed()
 
   }, [])
